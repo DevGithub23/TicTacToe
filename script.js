@@ -4,22 +4,15 @@ let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Player ${currentPlayer} has won!`;
-const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+//Task 3: Use template literals within the statements so it changes based on which player is next/ who wins.
+const winningMessage = () => `winningMessage`;
+const drawMessage = () => `drawMessage`;
+const currentPlayerTurn = () => `currentPlayerTurn`;
 
-// statusDisplay.innerHTML = currentPlayerTurn();
+statusDisplay.innerHTML = currentPlayerTurn();
 
-// insert winning conditions
 const winningConditions = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
+  // Task 1: Fill in all the winning conditions.
 ];
 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
@@ -79,9 +72,7 @@ function handleCellClick(clickedCellEvent) {
 }
 
 function handleRestartGame() {
-  gameActive = true;
-  currentPlayer = "X";
-  gameState = ["", "", "", "", "", "", "", "", ""];
+  // Task 2: Identify what variables are changed and reset them.
   statusDisplay.innerHTML = currentPlayerTurn();
   document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
 }
