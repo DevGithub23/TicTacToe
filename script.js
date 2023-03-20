@@ -6,9 +6,9 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+const currentPlayerTurn = () => `It's ${currentPlayer}'s turn.`;
 
-// statusDisplay.innerHTML = currentPlayerTurn();
+statusDisplay.innerHTML = currentPlayerTurn();
 
 // insert winning conditions
 const winningConditions = [
@@ -19,7 +19,7 @@ const winningConditions = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
